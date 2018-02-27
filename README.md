@@ -1,6 +1,6 @@
 ## About
 
-This is a react boiler-plate that uses webpack, and webpack-dev-server so .  It
+This is a react boiler-plate that uses webpack, and webpack-dev-server.  It
 contains a decent webpack.config.js starter, and some basic layout components/
 pages, that follow a pretty good pattern.  
 
