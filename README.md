@@ -1,3 +1,12 @@
+## About
+
+This is a react boiler-plate that uses webpack, and webpack-dev-server so .  It
+contains a decent webpack.config.js starter, and some basic layout components/
+pages, that follow a pretty good pattern.  
+
+Use this when you want to spin up react to test or learn React, or if you want
+a quick boiler place for a new app.   
+
 ## Instructions to run
 1. Navigate to folder */*
 2. *NPM install*
