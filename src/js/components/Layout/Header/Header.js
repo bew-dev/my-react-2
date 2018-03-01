@@ -1,6 +1,6 @@
 import React from "react";
 
-import Title from "./Header/Title";
+import Title from "./Title";
 
 export default class Header extends React.Component {
   handleChange(e) {
