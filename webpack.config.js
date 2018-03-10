@@ -4,20 +4,21 @@ const path = require('path');
 
 module.exports = {
   devServer: {
-    // historyApiFallback: true,
+    host: 'merlin.ld.pvt',
+    port: 3001,
+    historyApiFallback: true,
+    compress: true,
+    // stats: 'errors-only',
     // hot: true,
     // inline: true,
-    // stats: 'errors-only',
-    port: 3001,
-    host: 'merlin.ld.pvt',
     // contentBase: path.join(__dirname, "dist"),
-    // compress: true,
   },
   context: path.join(__dirname, "src"),
   devtool: debug ? "inline-sourcemap" : false,
   entry: "./js/client.js",
   module: {
     loaders: [
+      //JSX
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
@@ -28,15 +29,17 @@ module.exports = {
             'transform-class-properties'],
         }
       },
-      {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader'
-      }
+      //CSS
+      // {
+      //   test: /\.css$/,
+      //   loader: 'style-loader!css-loader'
+      // }
     ]
   },
   output: {
     path: __dirname + "/src/",
-    filename: "client.min.js"
+    filename: "client.min.js",
+    publicPath: '/',
   },
   plugins: debug ? [] : [
     new webpack.optimize.DedupePlugin(),
